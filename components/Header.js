@@ -2,7 +2,14 @@ import styled from "@emotion/styled";
 import React from "react";
 
 const Header = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <Button style={{ backgroundColor: "#3773f5", color: "#000" }}>
+        Buy / Sell
+      </Button>
+      <Button>Send / Receive</Button>
+    </Wrapper>
+  );
 };
 
 export default Header;
@@ -23,4 +30,17 @@ const Title = styled.div`
 
 const ButtonsContainer = styled.div`
   display: flex;
+`;
+
+const Button = styled.div`
+  border: 1px solid #282b2f;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
