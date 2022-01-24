@@ -1,19 +1,24 @@
 import { useWeb3 } from "@3rdweb/hooks";
 import styled from "@emotion/styled";
+import Dashboard from "./Dashboard";
 
 export default function Home() {
   const { address, connectWallet } = useWeb3();
 
   return (
     <Wrapper>
-      <WalletConnect>
-        <Button onClick={() => connectWallet("injected")}>
-          Connect Wallet
-        </Button>
-        <Details>
-          You need Chrome to be <br /> able to run this app.
-        </Details>
-      </WalletConnect>
+      {address ? (
+        <Dashboard address={address} />
+      ) : (
+        <WalletConnect>
+          <Button onClick={() => connectWallet("injected")}>
+            Connect Wallet
+          </Button>
+          <Details>
+            You need Chrome to be <br /> able to run this app.
+          </Details>
+        </WalletConnect>
+      )}
     </Wrapper>
   );
 }
