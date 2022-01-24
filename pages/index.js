@@ -10,6 +10,9 @@ export default function Home() {
         <Button onClick={() => connectWallet("injected")}>
           Connect Wallet
         </Button>
+        <Details>
+          You need Chrome to be <br /> able to run this app.
+        </Details>
       </WalletConnect>
     </Wrapper>
   );
@@ -44,4 +47,12 @@ const Button = styled.div`
   &:hover {
     cursor: pointer;
   }
+`;
+
+const Details = styled.div`
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #282b2f;
 `;
