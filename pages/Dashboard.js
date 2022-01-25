@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import React from "react";
 import Header from "../components/Header";
+import Main from "../components/Main";
 
 const Dashboard = ({ address }) => {
   return (
     <Wrapper>
       <MainContainer>
         <Header />
+        <Main />
       </MainContainer>
     </Wrapper>
   );
