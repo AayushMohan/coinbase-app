@@ -1,5 +1,25 @@
+import Image from "next/image";
+import CoinbaseLogo from "../assets/cb-logo.png";
+import styled from "styled-components";
+import { navItems } from "../static/navItems";
+
 const Sidebar = () => {
-  return <div></div>;
+  return (
+    <Wrapper>
+      <LogoContainer>
+        <Logo>
+          <Image src={CoinbaseLogo} alt="Coinbase Logo" />
+        </Logo>
+      </LogoContainer>
+      <NavItemsContainer>
+        {navItems.map((item, index) => (
+          <NavItem key={index}>
+            <NavIcon>{item.icon}</NavIcon>
+          </NavItem>
+        ))}
+      </NavItemsContainer>
+    </Wrapper>
+  );
 };
 
 export default Sidebar;
@@ -29,7 +49,7 @@ const NavItemsContainer = styled.div`
   }
 `;
 
-const NavItems = styled.div`
+const NavItem = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.3rem;
