@@ -27,6 +27,7 @@ const Portfolio = () => {
           <Divider />
           <div>
             {coins.map((coin) => (
+              // eslint-disable-next-line react/jsx-key
               <div>
                 <Coin coin={coin} />
                 {/* <h2>{coin.name}</h2> */}

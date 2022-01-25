@@ -28,3 +28,26 @@ const NavItemsContainer = styled.div`
     cursor: pointer;
   }
 `;
+
+const NavItems = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  height: 4rem;
+
+  &:hover {
+    background-color: #141519;
+  }
+`;
+
+const NavIcon = styled.div`
+  background-color: #141519;
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin-right: 0 1rem;
+  display: grid;
+  place-items: center;
+`;
