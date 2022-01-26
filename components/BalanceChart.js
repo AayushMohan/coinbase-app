@@ -1,0 +1,18 @@
+import styled from "styled-components";
+import { Line } from "react-chartjs-2";
+
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+};
+
+const BalanceChart = () => {
+  return (
+    <Wrapper>
+      <Line data={data} options={options} width={400}></Line>
+    </Wrapper>
+  );
+};
+
+export default BalanceChart;
+
+const Wrapper = styled.div``;
