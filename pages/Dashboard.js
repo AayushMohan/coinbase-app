@@ -9,7 +9,7 @@ const Dashboard = ({ address }) => {
     <Wrapper>
       <Sidebar />
       <MainContainer>
-        <Header address={address} />
+        <Header walletAddress={address} />
         <Main />
       </MainContainer>
     </Wrapper>
