@@ -3,6 +3,7 @@ import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { coins } from "../static/coins";
 import Coin from "./Coin";
+import BalanceChart from "./BalanceChart";
 
 const Portfolio = () => {
   return (
