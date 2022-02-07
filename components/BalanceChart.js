@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Line } from "react-chartjs-2";
+import Chart from "chart.js/auto";
 
 const data = {
   labels: [
@@ -35,15 +36,23 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+      data: [65, 59, 80, 81, 56, 55, 72, 45, 67, 55, 42],
     },
   ],
+};
+
+const options = {
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
 };
 
 const BalanceChart = () => {
   return (
     <Wrapper>
-      <Line data={data} options={options} width={400}></Line>
+      <Line data={data} options={options} width={400} height={150}></Line>
     </Wrapper>
   );
 };

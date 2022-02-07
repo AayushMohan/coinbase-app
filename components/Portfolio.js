@@ -9,6 +9,7 @@ const Portfolio = () => {
   return (
     <Wrapper>
       <Content>
+        <BalanceChart />
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
@@ -57,6 +58,8 @@ const Content = styled.div`
   max-width: 1000px;
   padding: 2rem 1rem;
 `;
+
+const Chart = styled.div``;
 
 const PortfolioTable = styled.div`
   margin-top: 1rem;
