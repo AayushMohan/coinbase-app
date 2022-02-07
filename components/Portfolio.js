@@ -21,7 +21,7 @@ const Portfolio = () => {
       }
     };
 
-    getCoins();
+    return getCoins();
   }, []);
   return (
     <Wrapper>
