@@ -4,10 +4,8 @@ import Chart from "chart.js/auto";
 
 const data = {
   labels: [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+    "March",
+    "April",
     "May",
     "Jun",
     "Jul",
@@ -16,6 +14,8 @@ const data = {
     "Oct",
     "Nov",
     "Dec",
+    "Jan",
+    "Feb",
   ],
   datasets: [
     {
@@ -36,7 +36,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 72, 45, 67, 55, 42],
+      data: [65, 59, 80, 81, 56, 55, 72, 45, 67, 55, 42, 54],
     },
   ],
 };
