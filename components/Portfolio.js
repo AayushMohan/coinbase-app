@@ -9,6 +9,13 @@ const Portfolio = () => {
   return (
     <Wrapper>
       <Content>
+        <Chart>
+          <div>
+            <Balance>
+              <BalanceTitle>Portfolio balance</BalanceTitle>
+            </Balance>
+          </div>
+        </Chart>
         <BalanceChart />
         <PortfolioTable>
           <TableItem>
