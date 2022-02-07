@@ -13,10 +13,15 @@ const Portfolio = () => {
           <div>
             <Balance>
               <BalanceTitle>Portfolio balance</BalanceTitle>
+              <BalanceValue>
+                {"$"}
+                {/* {walletBalance.toLocalString()} */}
+                46,000
+              </BalanceValue>
             </Balance>
           </div>
+          <BalanceChart />
         </Chart>
-        <BalanceChart />
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
