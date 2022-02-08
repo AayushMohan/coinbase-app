@@ -21,19 +21,24 @@ const Portfolio = () => {
   const [thirdWebTokens, setThirdWebTokens] = useState([]);
 
   useEffect(() => {
-    const getCoins = async () => {
+    const getSanityAndThirdWebTokens = async () => {
       const coins = await fetch(
         "https://mv4xbeen.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22coins%22%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D"
       );
 
-      const sanityTokens = await coins.json().result;
+      const sanityTokens = (await coins.json()).result;
       setSanityTokens(sanityTokens);
 
-      sanityTokens.map((token) => console.log(token.contractAddress));
+      setThirdWebTokens(
+        sanityTokens.map((token) => sdk.getTokenModule(token.contractAddress))
+      );
     };
 
     return getSanityAndThirdWebTokens();
   }, []);
+  console.log("Sanity", sanityTokens);
+  console.log("Thirdweb", thirdWebTokens);
+
   return (
     <Wrapper>
       <Content>
