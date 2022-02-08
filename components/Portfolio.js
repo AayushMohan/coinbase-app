@@ -18,6 +18,7 @@ const sdk = new ThirdwebSDK(
 
 const Portfolio = () => {
   const [sanityTokens, setSanityTokens] = useState([]);
+  const [thirdWebTokens, setThirdWebTokens] = useState([]);
   useEffect(() => {
     const getCoins = async () => {
       try {
