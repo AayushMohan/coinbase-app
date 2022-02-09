@@ -6,9 +6,18 @@ import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
 const Portfolio = ({ thirdWebTokens, sanityTokens, walletAddress }) => {
-  thirdWebTokens[1]
-    .balanceOf(walletAddress)
-    .then((balance) => console.log(Number(balance.displayValue) * 41642));
+  // thirdWebTokens[1]
+  //   .balanceOf(walletAddress)
+  //   .then((balance) => console.log(Number(balance.displayValue) * 41642));
+
+  console.log(sanityTokens);
+  const tokenToUSD = {};
+
+  for (token of sanityTokens) {
+    tokenToUSD[token.contractAddress] = Number(token.usdPrice);
+  }
+
+  console.log(tokenToUSD);
 
   // Convert all of my tokens into USD
   return (
