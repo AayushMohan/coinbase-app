@@ -5,7 +5,12 @@ import { coins } from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
-const Portfolio = () => {
+const Portfolio = ({ thirdWebTokens, sanityTokens, walletAddress }) => {
+  thirdWebTokens[1]
+    .balanceOf(walletAddress)
+    .then((balance) => console.log(Number(balance.displayValue) * 41642));
+
+  // Convert all of my tokens into USD
   return (
     <Wrapper>
       <Content>
